@@ -11,7 +11,7 @@ app.get('/posts', (req, res) => {
 
 });
 
-app.post('/posts', (req, res) => {
+app.post('/events', (req, res) => {
 
 });
 
