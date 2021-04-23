@@ -15,17 +15,13 @@ export default ({ postId }) => {
     }, []);
 
     const renderedComments = Object.values(comments).map(comment => {
-        return (<div className="card" 
-        style={{ width: '100%', marginBottom: '20px' }}
-        key={comment.id}
-        >
-            <div className="card-body"><p>
-                {comment.content}</p>
-            </div>
-        </div>
+        return (
+            <li key={comment.id}>
+                {comment.content}
+            </li>
         )
     })
-    return <div className="d-flex flex-column flex-wrap justify-content-between">
+    return <ul>
         {renderedComments}
-        </div>;
+        </ul>;
 }
