@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: dylangardnerroberts/event-bus:0.0.3
+          image: dylangardnerroberts/event-bus:0.0.4
 ---
 apiVersion: v1
 kind: Service

@@ -33,6 +33,6 @@ app.get('/events', (req, res) => {
 });
 
 app.listen(4005, () => {
-    console.log('Event-Bus v2')
+    console.log('Event-Bus v4')
     console.log('listening on 4005')
 });
