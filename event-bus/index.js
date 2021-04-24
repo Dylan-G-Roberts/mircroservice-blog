@@ -15,15 +15,15 @@ app.post('/events', (req, res) => {
     axios.post('http://posts-clusterip-srv:4000/events', event).catch((err) => {
         console.log(err.message);
     });
-    // axios.post('http://localhost:4001/events', event).catch((err) => {
-    //     console.log(err.message);
-    // });
-    // axios.post('http://localhost:4002/events', event).catch((err) => {
-    //     console.log(err.message);
-    // });
-    // axios.post('http://localhost:4003/events', event).catch((err) => {
-    //     console.log(err.message);
-    // });
+    axios.post('http://comments-srv:4001/events', event).catch((err) => {
+        console.log(err.message);
+    });
+    axios.post('http://query-srv:4002/events', event).catch((err) => {
+        console.log(err.message);
+    });
+    axios.post('http://moderation-srv:4003/events', event).catch((err) => {
+        console.log(err.message);
+    });
     
     res.send({ status: 'OK' });
 });
@@ -33,6 +33,6 @@ app.get('/events', (req, res) => {
 });
 
 app.listen(4005, () => {
-    console.log('event-bus v1')
+    console.log('Event-Bus v2')
     console.log('listening on 4005')
 });
